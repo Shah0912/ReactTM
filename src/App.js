@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Projects from './Components/Projects'
+import AddProject from './Components/AddProject';
 
 function App() {
+
+  const projects = [
+    {
+      title: "Business Website",
+      category: "Fintech"
+    },
+    {
+      title: "Social App",
+      category: "Web Development"
+    },
+    {
+      title: "Ecommerce Shopping Cart",
+      category: "Android Development"
+    }
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddProject />
+      <Projects projects = {projects} />
     </div>
   );
 }
